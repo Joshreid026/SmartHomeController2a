@@ -27,7 +27,6 @@ namespace SmartHomeController
             recordingStatus = false; // Default recording status
 
         }
-
      
     }
 }

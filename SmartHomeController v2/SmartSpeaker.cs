@@ -30,8 +30,5 @@ namespace SmartHomeController
             this.Volume = speakerVolume;
 
         }
-
-        
-
     }
 }

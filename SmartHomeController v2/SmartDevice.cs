@@ -51,6 +51,5 @@ namespace SmartHomeController
             this.Status = false;
         }
 
-
     }
 }
