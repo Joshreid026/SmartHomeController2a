@@ -25,10 +25,10 @@ namespace SmartHomeController
         }
 
         // Default constructor includes base class constructor information
-        public SmartLight(int deviceID, string deviceName) : base(deviceID, deviceName)
+        public SmartLight(int deviceID, string deviceName, double brightness, string colour) : base(deviceID, deviceName)
         {
-            this.Brightness = 0.5; // Default brightness
-            this.Colour = "White"; // Default colour
+            this.Brightness = brightness; // Custom brightness
+            this.Colour = colour; // Custom colour
         }
 
         // Methods to set brightness and colour
@@ -42,6 +42,13 @@ namespace SmartHomeController
         {
             this.Colour = colour;
             Console.WriteLine($"Colour now set to {Colour}");
+        }
+
+        public override void GetStatus()
+        {
+            base.GetStatus();
+            Console.WriteLine("This is a smart light.");
+            Console.WriteLine($"Brightness: {Brightness}%, Colour: {Colour}");
         }
 
 

@@ -25,10 +25,16 @@ namespace SmartHomeController
             set { isPlaying = value; }
         }
 
-        public SmartSpeaker(int speakerVolume) 
+        public SmartSpeaker(int deviceID, string deviceName, int speakerVolume) : base(deviceID, deviceName)
         {
             this.Volume = speakerVolume;
 
+        }
+        public override void GetStatus()
+        {
+            base.GetStatus();
+            Console.WriteLine("This is a smart speaker.");
+            Console.WriteLine($"Volume: {Volume}, Is Playing: {(IsPlaying ? "Yes" : "No")}");
         }
     }
 }
